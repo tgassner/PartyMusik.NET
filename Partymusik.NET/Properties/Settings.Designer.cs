@@ -69,5 +69,17 @@ namespace Gassner.Partymusik.NET.Properties {
                 this["PasswordProtection"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PlayerPath {
+            get {
+                return ((string)(this["PlayerPath"]));
+            }
+            set {
+                this["PlayerPath"] = value;
+            }
+        }
     }
 }

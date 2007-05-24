@@ -31,11 +31,14 @@ namespace Gassner.Partymusik.NET {
             this.labelInfo = new System.Windows.Forms.Label();
             this.checkBoxAlwaysFullsize = new System.Windows.Forms.CheckBox();
             this.checkBoxPasswordProtection = new System.Windows.Forms.CheckBox();
+            this.labelPlayer = new System.Windows.Forms.Label();
+            this.labelPlayerPath = new System.Windows.Forms.Label();
+            this.buttonFindPlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(12, 370);
+            this.buttonBack.Location = new System.Drawing.Point(12, 385);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(116, 23);
             this.buttonBack.TabIndex = 0;
@@ -43,10 +46,10 @@ namespace Gassner.Partymusik.NET {
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonOK_Click);
             // 
-            // button2
+            // buttonChangePassword
             // 
-            this.buttonChangePassword.Location = new System.Drawing.Point(12, 341);
-            this.buttonChangePassword.Name = "button2";
+            this.buttonChangePassword.Location = new System.Drawing.Point(12, 356);
+            this.buttonChangePassword.Name = "buttonChangePassword";
             this.buttonChangePassword.Size = new System.Drawing.Size(116, 23);
             this.buttonChangePassword.TabIndex = 1;
             this.buttonChangePassword.Text = "Change Password";
@@ -81,11 +84,11 @@ namespace Gassner.Partymusik.NET {
             this.buttonDelDirectory.UseVisualStyleBackColor = true;
             this.buttonDelDirectory.Click += new System.EventHandler(this.buttonDelDirectory_Click);
             // 
-            // label1
+            // labelInfo
             // 
             this.labelInfo.AutoSize = true;
             this.labelInfo.Location = new System.Drawing.Point(90, 9);
-            this.labelInfo.Name = "label1";
+            this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(85, 13);
             this.labelInfo.TabIndex = 6;
             this.labelInfo.Text = "Musik Files roots";
@@ -93,7 +96,7 @@ namespace Gassner.Partymusik.NET {
             // checkBoxAlwaysFullsize
             // 
             this.checkBoxAlwaysFullsize.AutoSize = true;
-            this.checkBoxAlwaysFullsize.Location = new System.Drawing.Point(12, 289);
+            this.checkBoxAlwaysFullsize.Location = new System.Drawing.Point(12, 304);
             this.checkBoxAlwaysFullsize.Name = "checkBoxAlwaysFullsize";
             this.checkBoxAlwaysFullsize.Size = new System.Drawing.Size(96, 17);
             this.checkBoxAlwaysFullsize.TabIndex = 7;
@@ -104,7 +107,7 @@ namespace Gassner.Partymusik.NET {
             // checkBoxPasswordProtection
             // 
             this.checkBoxPasswordProtection.AutoSize = true;
-            this.checkBoxPasswordProtection.Location = new System.Drawing.Point(12, 312);
+            this.checkBoxPasswordProtection.Location = new System.Drawing.Point(12, 327);
             this.checkBoxPasswordProtection.Name = "checkBoxPasswordProtection";
             this.checkBoxPasswordProtection.Size = new System.Drawing.Size(123, 17);
             this.checkBoxPasswordProtection.TabIndex = 8;
@@ -112,12 +115,43 @@ namespace Gassner.Partymusik.NET {
             this.checkBoxPasswordProtection.UseVisualStyleBackColor = true;
             this.checkBoxPasswordProtection.CheckedChanged += new System.EventHandler(this.checkBoxPasswordProtection_CheckedChanged);
             // 
+            // labelPlayer
+            // 
+            this.labelPlayer.AutoSize = true;
+            this.labelPlayer.Location = new System.Drawing.Point(145, 272);
+            this.labelPlayer.Name = "labelPlayer";
+            this.labelPlayer.Size = new System.Drawing.Size(39, 13);
+            this.labelPlayer.TabIndex = 9;
+            this.labelPlayer.Text = "Player:";
+            // 
+            // labelPlayerPath
+            // 
+            this.labelPlayerPath.AutoSize = true;
+            this.labelPlayerPath.Location = new System.Drawing.Point(187, 272);
+            this.labelPlayerPath.Name = "labelPlayerPath";
+            this.labelPlayerPath.Size = new System.Drawing.Size(35, 13);
+            this.labelPlayerPath.TabIndex = 10;
+            this.labelPlayerPath.Text = "label2";
+            // 
+            // buttonFindPlayer
+            // 
+            this.buttonFindPlayer.Location = new System.Drawing.Point(12, 267);
+            this.buttonFindPlayer.Name = "buttonFindPlayer";
+            this.buttonFindPlayer.Size = new System.Drawing.Size(116, 23);
+            this.buttonFindPlayer.TabIndex = 11;
+            this.buttonFindPlayer.Text = "Find Player";
+            this.buttonFindPlayer.UseVisualStyleBackColor = true;
+            this.buttonFindPlayer.Click += new System.EventHandler(this.buttonFindPlayer_Click);
+            // 
             // PartyMusicSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 440);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonFindPlayer);
+            this.Controls.Add(this.labelPlayerPath);
+            this.Controls.Add(this.labelPlayer);
             this.Controls.Add(this.checkBoxPasswordProtection);
             this.Controls.Add(this.checkBoxAlwaysFullsize);
             this.Controls.Add(this.labelInfo);
@@ -146,5 +180,8 @@ namespace Gassner.Partymusik.NET {
         private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.CheckBox checkBoxAlwaysFullsize;
         private System.Windows.Forms.CheckBox checkBoxPasswordProtection;
+        private System.Windows.Forms.Label labelPlayer;
+        private System.Windows.Forms.Label labelPlayerPath;
+        private System.Windows.Forms.Button buttonFindPlayer;
     }
 }

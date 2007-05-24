@@ -258,5 +258,28 @@ namespace Gassner.Partymusik.NET {
             return Partymusik.NET.Properties.Settings.Default.PasswordProtection;
         }
 
+        private void buttonStartPlayer_Click(object sender, EventArgs e) {
+            if (!isPasswordProtected()) {
+                callPlayer();
+            } else {
+                CheckPassword checkPassword = new CheckPassword();
+                checkPassword.ShowDialog();
+                if (checkPassword.Result == Result.OK) {
+                    callPlayer();
+                }
+                if (checkPassword.Result == Result.Wrong) {
+                    MessageBox.Show("Password wrong");
+                }
+            }
+        }
+
+        private void callPlayer() {
+            string playerPath = Partymusik.NET.Properties.Settings.Default.PlayerPath;
+            if (File.Exists(playerPath)){
+                System.Diagnostics.Process.Start(playerPath);
+            }else{
+                MessageBox.Show("File does not Exist");
+            }
+        }
     }
 }
