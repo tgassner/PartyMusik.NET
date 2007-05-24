@@ -24,11 +24,11 @@ namespace Gassner.Partymusik.NET {
         /// </summary>
         private void InitializeComponent() {
             this.buttonBack = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonChangePassword = new System.Windows.Forms.Button();
             this.listBoxDirectories = new System.Windows.Forms.ListBox();
             this.buttonAddDirectory = new System.Windows.Forms.Button();
             this.buttonDelDirectory = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.checkBoxAlwaysFullsize = new System.Windows.Forms.CheckBox();
             this.checkBoxPasswordProtection = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -45,13 +45,13 @@ namespace Gassner.Partymusik.NET {
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 341);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Change Password";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonChangePassword.Location = new System.Drawing.Point(12, 341);
+            this.buttonChangePassword.Name = "button2";
+            this.buttonChangePassword.Size = new System.Drawing.Size(116, 23);
+            this.buttonChangePassword.TabIndex = 1;
+            this.buttonChangePassword.Text = "Change Password";
+            this.buttonChangePassword.UseVisualStyleBackColor = true;
+            this.buttonChangePassword.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBoxDirectories
             // 
@@ -83,12 +83,12 @@ namespace Gassner.Partymusik.NET {
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Musik Files roots";
+            this.labelInfo.AutoSize = true;
+            this.labelInfo.Location = new System.Drawing.Point(90, 9);
+            this.labelInfo.Name = "label1";
+            this.labelInfo.Size = new System.Drawing.Size(85, 13);
+            this.labelInfo.TabIndex = 6;
+            this.labelInfo.Text = "Musik Files roots";
             // 
             // checkBoxAlwaysFullsize
             // 
@@ -120,11 +120,11 @@ namespace Gassner.Partymusik.NET {
             this.ControlBox = false;
             this.Controls.Add(this.checkBoxPasswordProtection);
             this.Controls.Add(this.checkBoxAlwaysFullsize);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.buttonDelDirectory);
             this.Controls.Add(this.buttonAddDirectory);
             this.Controls.Add(this.listBoxDirectories);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonChangePassword);
             this.Controls.Add(this.buttonBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PartyMusicSettings";
@@ -139,11 +139,11 @@ namespace Gassner.Partymusik.NET {
         #endregion
 
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonChangePassword;
         private System.Windows.Forms.ListBox listBoxDirectories;
         private System.Windows.Forms.Button buttonAddDirectory;
         private System.Windows.Forms.Button buttonDelDirectory;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.CheckBox checkBoxAlwaysFullsize;
         private System.Windows.Forms.CheckBox checkBoxPasswordProtection;
     }
