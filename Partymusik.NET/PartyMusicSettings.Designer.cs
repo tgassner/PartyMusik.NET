@@ -1,4 +1,4 @@
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     partial class PartyMusicSettings {
         /// <summary>
         /// Required designer variable.

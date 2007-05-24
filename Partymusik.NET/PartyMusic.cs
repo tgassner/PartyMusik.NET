@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     public partial class PartyMusic : Form {
         private List<string> list;
         private List<MusikFile> resultList;

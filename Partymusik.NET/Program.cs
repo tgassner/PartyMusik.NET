@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     static class Program {
         /// <summary>
         /// The main entry point for the application.

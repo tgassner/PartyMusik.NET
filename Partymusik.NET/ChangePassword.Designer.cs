@@ -1,4 +1,4 @@
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     partial class ChangePassword {
         /// <summary>
         /// Required designer variable.
