@@ -1,4 +1,4 @@
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     partial class PartyMusic {
         /// <summary>
         /// Required designer variable.
@@ -153,7 +153,7 @@ namespace Partymusik.NET {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Name = "PartyMusic";
-            this.Text = "Partymusik.NET 1.1                          by Gassi the real Oger";
+            this.Text = "Partymusik.NET 1.1.1                        by Gassi the real Oger";
             this.SizeChanged += new System.EventHandler(this.PartyMusic_SizeChanged);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PartyMusic_FormClosing);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);

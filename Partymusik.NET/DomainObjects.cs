@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     public class MusikFile {
         private string fullPath;
         private string fileName;

@@ -7,7 +7,7 @@
     <ProjectGuid>{255BD2B9-49F0-430C-A74A-2D161D448A3F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Partymusik.NET</RootNamespace>
+    <RootNamespace>Gassner.Partymusik.NET</RootNamespace>
     <AssemblyName>Partymusik.NET</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

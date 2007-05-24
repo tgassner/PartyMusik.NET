@@ -1,4 +1,4 @@
-﻿namespace Partymusik.NET.Properties {
+﻿namespace Gassner.Partymusik.NET.Properties {
     
     
     // Diese Klasse ermöglicht die Behandlung bestimmter Ereignisse der Einstellungsklasse:

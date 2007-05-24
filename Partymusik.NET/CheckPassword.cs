@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Partymusik.NET {
+namespace Gassner.Partymusik.NET {
     public enum Result { OK, Wrong, Cancle };
 
     public partial class CheckPassword : Form {
