@@ -75,6 +75,11 @@ namespace Gassner.Partymusik.NET {
             }
             this.checkBoxAlwaysFullsize.Checked = Partymusik.NET.Properties.Settings.Default.AlwaysFullsize;
             this.checkBoxPasswordProtection.Checked = Partymusik.NET.Properties.Settings.Default.PasswordProtection;
+            if (Partymusik.NET.Properties.Settings.Default.PlayerPath.Equals("")) {
+                labelPlayerPath.Text = "No Player defined";
+            } else {
+                labelPlayerPath.Text = Partymusik.NET.Properties.Settings.Default.PlayerPath;
+            }
         }
 
         private void checkBoxAlwaysFullsize_CheckedChanged(object sender, EventArgs e) {
@@ -85,6 +90,16 @@ namespace Gassner.Partymusik.NET {
         private void checkBoxPasswordProtection_CheckedChanged(object sender, EventArgs e) {
             Partymusik.NET.Properties.Settings.Default.PasswordProtection = this.checkBoxPasswordProtection.Checked;
             Partymusik.NET.Properties.Settings.Default.Save();
+        }
+
+        private void buttonFindPlayer_Click(object sender, EventArgs e) {
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult result = ofd.ShowDialog();
+            if (result == DialogResult.OK) {
+                Partymusik.NET.Properties.Settings.Default.PlayerPath = ofd.FileName;
+                Partymusik.NET.Properties.Settings.Default.Save();
+                labelPlayerPath.Text = ofd.FileName;
+            }
         }
 
 

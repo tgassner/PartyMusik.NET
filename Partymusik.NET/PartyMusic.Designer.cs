@@ -34,6 +34,7 @@ namespace Gassner.Partymusik.NET {
             this.labelFilesInBuffer = new System.Windows.Forms.Label();
             this.textBoxHits = new System.Windows.Forms.TextBox();
             this.textBoxFilesInBuffer = new System.Windows.Forms.TextBox();
+            this.buttonStartPlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -136,11 +137,22 @@ namespace Gassner.Partymusik.NET {
             this.textBoxFilesInBuffer.TabIndex = 10;
             this.textBoxFilesInBuffer.Text = "0";
             // 
+            // buttonStartPlayer
+            // 
+            this.buttonStartPlayer.Location = new System.Drawing.Point(12, 310);
+            this.buttonStartPlayer.Name = "buttonStartPlayer";
+            this.buttonStartPlayer.Size = new System.Drawing.Size(174, 23);
+            this.buttonStartPlayer.TabIndex = 11;
+            this.buttonStartPlayer.Text = "Start Player";
+            this.buttonStartPlayer.UseVisualStyleBackColor = true;
+            this.buttonStartPlayer.Click += new System.EventHandler(this.buttonStartPlayer_Click);
+            // 
             // PartyMusic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 420);
+            this.Controls.Add(this.buttonStartPlayer);
             this.Controls.Add(this.textBoxFilesInBuffer);
             this.Controls.Add(this.textBoxHits);
             this.Controls.Add(this.labelFilesInBuffer);
@@ -153,7 +165,7 @@ namespace Gassner.Partymusik.NET {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Name = "PartyMusic";
-            this.Text = "Partymusik.NET 1.1.1                        by Gassi the real Oger";
+            this.Text = "Partymusik.NET 1.2                        by Gassi the real Oger";
             this.SizeChanged += new System.EventHandler(this.PartyMusic_SizeChanged);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PartyMusic_FormClosing);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
@@ -176,6 +188,7 @@ namespace Gassner.Partymusik.NET {
         private System.Windows.Forms.Label labelFilesInBuffer;
         private System.Windows.Forms.TextBox textBoxHits;
         private System.Windows.Forms.TextBox textBoxFilesInBuffer;
+        private System.Windows.Forms.Button buttonStartPlayer;
     }
 }
 
