@@ -71,7 +71,6 @@ namespace Gassner.Partymusik.NET {
             this.listBoxResult.Name = "listBoxResult";
             this.listBoxResult.Size = new System.Drawing.Size(600, 394);
             this.listBoxResult.TabIndex = 3;
-            this.listBoxResult.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBoxResult_DragEnter);
             this.listBoxResult.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxResult_MouseDown);
             // 
             // buttonTopMost
@@ -98,6 +97,7 @@ namespace Gassner.Partymusik.NET {
             this.progressBar.Location = new System.Drawing.Point(12, 67);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(174, 23);
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar.TabIndex = 6;
             // 
             // buttonSettings
@@ -165,11 +165,11 @@ namespace Gassner.Partymusik.NET {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Name = "PartyMusic";
-            this.Text = "Partymusik.NET 1.2                        by Gassi the real Oger";
+            this.Text = "Partymusik.NET 1.3                        by Gassi the real Oger";
+            this.Load += new System.EventHandler(this.PartyMusic_Load);
             this.SizeChanged += new System.EventHandler(this.PartyMusic_SizeChanged);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PartyMusic_FormClosing);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
-            this.Load += new System.EventHandler(this.PartyMusic_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

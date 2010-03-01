@@ -22,8 +22,6 @@ namespace Gassner.Partymusik.NET {
             this.label1.Visible = false;
             this.progressBar.Visible = false;
 
-            progressBar.Style = ProgressBarStyle.Continuous;
-
             if (Partymusik.NET.Properties.Settings.Default.Paths != null) {
                 this.roots = new string[Partymusik.NET.Properties.Settings.Default.Paths.Count];
                 int i = 0;
@@ -35,6 +33,7 @@ namespace Gassner.Partymusik.NET {
                 this.roots = new string[0];
             }
             locker = new Object();
+            this.textBoxQuery.Focus();
         }
 
         private void buttonTopMost_Click(object sender, EventArgs e) {
@@ -61,23 +60,6 @@ namespace Gassner.Partymusik.NET {
             this.textBoxHits.Text = resultList.Count.ToString();
             this.textBoxQuery.Enabled = true;
             this.buttonSearch.Enabled = true;
-        }
-
-        private void kit() {
-            callback progbarDelegate = new callback(progbar);
-            bool localsearching;
-            lock (locker) {
-                localsearching = searching;
-            }
-            while (localsearching) {
-                this.Invoke(progbarDelegate);
-                Thread.Sleep(50);
-                lock (locker) {
-                    localsearching = searching;
-                }
-            }
-            callback endSearchDelegate = new callback(endSearch);
-            this.Invoke(endSearchDelegate);
         }
 
         private void searchFS() {
@@ -123,6 +105,8 @@ namespace Gassner.Partymusik.NET {
             lock (locker) {
                 this.searching = false;
             }
+            callback endSearchDelegate = new callback(endSearch);
+            this.Invoke(endSearchDelegate);
         }
 
         private void doSearch() {
@@ -139,6 +123,13 @@ namespace Gassner.Partymusik.NET {
                 return;
             }
 
+            foreach (String root in roots) {
+                if (!Directory.Exists(root)) {
+                    MessageBox.Show("Warning: \r\n'" + root + "'\r\n not found. (change in Settings)");
+                    return;
+                }
+            }
+
             this.listBoxResult.Items.Clear();
             if (this.textBoxQuery.Text.Equals("")) {
                 MessageBox.Show("Please enter a Search Query!");
@@ -151,8 +142,6 @@ namespace Gassner.Partymusik.NET {
                 this.searching = true;
             }
             this.progressBar.Visible = true;
-            Thread th = new Thread(new ThreadStart(kit));
-            th.Start();
             
             if (list == null) {
                 //First Time Search
