@@ -88,7 +88,7 @@ namespace Gassner.Partymusik.NET {
         }
 
         private void searchMEM(){
-            string query = textBoxQuery.Text.ToLower();
+            string query = textBoxQuery.Text.Trim().ToLower();
             string[] patterns = query.Split(' ');
             this.resultList = new List<MusikFile>();
             foreach (string str in list) {
