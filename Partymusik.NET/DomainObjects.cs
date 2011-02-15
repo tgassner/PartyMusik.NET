@@ -8,6 +8,8 @@ namespace Gassner.Partymusik.NET {
         private string fullPath;
         private string fileName;
         private string invertRestPath;
+        private long filesize;
+        private string filesizeText;
 
         /// <summary>
         /// Constructor inits the Members
@@ -16,7 +18,20 @@ namespace Gassner.Partymusik.NET {
         /// <param name="path">the path of the File</param>
         public MusikFile(string path) {
             this.fullPath = path;
-            this.fileName = new FileInfo(path).Name;
+            FileInfo fileInfo = new FileInfo(path);
+            this.fileName = fileInfo.Name;
+            this.filesize = fileInfo.Length;
+
+            if (this.filesize < 1024) {
+                this.filesizeText = String.Format("{0:0.##}", this.filesize) + " B";
+            } else if (this.filesize < (1024 * 1024)) {
+                this.filesizeText = String.Format("{0:0.##}", ((double)this.filesize) / 1024.0) + " KB";
+            } else if (this.filesize < (1024 * 1024 * 1024)) {
+                this.filesizeText = String.Format("{0:0.##}", ((double)this.filesize) / (1024.0 * 1024.0)) + " MB";
+            } else {
+                this.filesizeText = String.Format("{0:0.##}", ((double)this.filesize) / (1024.0 * 1024.0 * 1024.0)) + " GB";
+            }
+
             string[] pathElements = new FileInfo(path).DirectoryName.Split(Path.DirectorySeparatorChar);
             StringBuilder sb = new StringBuilder();
             foreach(string str in pathElements){
@@ -24,6 +39,18 @@ namespace Gassner.Partymusik.NET {
                 sb.Insert(0, str);
             }
             this.invertRestPath = sb.ToString();
+        }
+
+        public string FileSizeText {
+            get {
+                return filesizeText;
+            }
+        }
+
+        public long FileSize {
+            get {
+                return filesize;
+            }
         }
 
         public string FullPath {
@@ -39,7 +66,7 @@ namespace Gassner.Partymusik.NET {
         }
 
         public override string ToString() {
-            return fileName + "   " + this.invertRestPath;
+            return fileName + "   " + FileSizeText + " " + this.invertRestPath;
         }
     }
 }
