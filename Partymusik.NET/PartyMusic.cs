@@ -99,7 +99,9 @@ namespace Gassner.Partymusik.NET {
                     }
                 }
                 if (found) {
-                    this.resultList.Add(new MusikFile(str));
+                    try {
+                        this.resultList.Add(new MusikFile(str));
+                    } catch (Exception) { }
                 }
             }
             lock (locker) {
