@@ -9,6 +9,11 @@ namespace Gassner.Partymusik.NET {
         private string fileName;
         private string invertRestPath;
 
+        /// <summary>
+        /// Constructor inits the Members
+        /// Exception: PathTooLongException
+        /// </summary>
+        /// <param name="path">the path of the File</param>
         public MusikFile(string path) {
             this.fullPath = path;
             this.fileName = new FileInfo(path).Name;
