@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partymusik.NET", "Partymusik.NET\Partymusik.NET.csproj", "{255BD2B9-49F0-430C-A74A-2D161D448A3F}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstallerPartymusik.NET", "InstallerPartymusik.NET\InstallerPartymusik.NET.vdproj", "{6FD0510C-7013-4C90-B286-394FA5B8C62B}"
